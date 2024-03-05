@@ -3,19 +3,18 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\UserController;
 
-    // Route::get('/', function () {
-    //     return view('welcome');
-    // });
+// tambahkan baris no 5 di atas
 
-Route::get('/home', [HomeController::class, 'home']);
+    Route::get('/welcome', function () {
+        return view('welcome');
+    });
+
+    Route::get('/', [IndexController::class, 'index']);
+    Route::get('/home', [HomeController::class, 'home']);
+    Route::get('/user',[UserController::class,'home']);
+    Route::get('/user/store',[UserController::class,'store']);
+    Route::get('/user/update/{id}',[UserController::class,'update']);
+    Route::get('/user/destroy/{id}',[UserController::class,'destroy']);

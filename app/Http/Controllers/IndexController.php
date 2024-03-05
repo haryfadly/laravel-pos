@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class IndexController extends Controller
 {
     //
-    public function home()
+    public function index()
     {
         $data = array('title' => 'Home Page');
-        return view ('home',$data);
+        return view ('index',$data);
     }
 }
