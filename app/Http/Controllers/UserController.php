@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function home()
+    public function index()
     {
         $data = array(
             'title' => 'Data User',
@@ -43,7 +43,7 @@ class UserController extends Controller
 
     public function destroy($id)
     {
-    User::where('id', $id)->delete();
+    $user=User::where('id', $id)->delete();
     return redirect('/user')->with('success', 'Data berhasil dihapus');
     }
 }

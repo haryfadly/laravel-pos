@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <titl><{{$title}} </title>
+    <title>{{$title}} </title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.png">
     <!-- Custom Stylesheet -->
     <link href="/assets/plugins/tables/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
+
+
 </head>
 <body>
     <!--*******************
@@ -94,13 +96,13 @@
             <li class="nav-label">Dashboard</li>
             <li>
             <a href="a" aria-expanded="false">
-            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dasboard</span>
+            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
         </a>
     </li>
                     
     <li class="nav-label">UI Components</li>
     <li>
-    <a href="a" aria-expanded="false">
+    <a href="/setdiskon" aria-expanded="false">
     <i class="icon-speedometer menu-icon"></i><span class="nav-text">Setting Diskon</span>
     </a>
     </li>
@@ -123,7 +125,7 @@
         </li>
 
             <li>
-            <a href="transaksi" aria-expanded="false">
+            <a href="/transaksi" aria-expanded="false">
         <i class="icon-speedometer menu-icon"></i><span class="nav-text">Data Laporan</span>
             </a>
             </li>
@@ -133,11 +135,13 @@
         <!--**********************************
             Sidebar end
         ***********************************-->
-    @yield('content')
+
+        @yield('content')
+
         <!--**********************************
             Footer start
         ***********************************-->
-        <div class="footer">
+<div class="footer">
     <div class="copyright">
     <p>Copyright &copy; Designed & Developed by <a href="a">Quixlab</a> 2018</p>
     </div>
