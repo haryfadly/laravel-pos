@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Sign In</title>
+    <title>Sign Up</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.png">
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
@@ -41,25 +41,29 @@
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                                <a class="text-center" href="#"> <h4>Silakan Login</h4></a>
+                                <a class="text-center" href="#"> <h4>Register</h4></a>
         
-                                <form class="mt-5 mb-5 login-input" method="POST" action="{{ route('login') }}">
+                                <form class="mt-5 mb-5 login-input" method="POST" action="{{ route('register') }}">
                                     @csrf
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email" name="email">
+                                        <input type="text" class="form-control" placeholder="Nama" name="name" value="{{ old('name') }}">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}">
                                     </div>
                                     @error('email')
                                         <small>{{ $message }}</small>
                                     @enderror
+
                                     <div class="form-group">
                                         <input type="password" class="form-control" placeholder="Password" name="password">
                                     </div>
                                     @error('password')
                                         <small>{{ $message }}</small>
                                     @enderror
-                                    <button type="submit" class="btn login-form__btn submit w-100">Sign In</button>
+                                    <button type="submit" class="btn login-form__btn submit w-100">Sign Up</button>
                                 </form>
-                                <p class="mt-5 login-form__footer">Dont have account? <a href="{{ route('signup') }}" class="text-primary">Sign Up</a> now</p>
                             </div>
                         </div>
                     </div>
@@ -96,7 +100,7 @@
     <script>
         Swal.fire({
             icon: "info",
-            // title: "Logout",
+            title: "Logout",
             html: `
                 {{ $message }}
             `,

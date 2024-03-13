@@ -17,7 +17,7 @@ class UserController extends Controller
         return view('admin.master.user.list', $data);
     }
 
-    public function store(Request $request)
+    public function create(Request $request)
     {
         User::create([
             'name'    => $request->name,
@@ -41,9 +41,12 @@ class UserController extends Controller
 
     }
 
-    public function destroy($id)
+    public function delete($id)
     {
-    $user=User::where('id', $id)->delete();
+        // $user=User::where('id', $id)->delete();
+        User::where('id', $id)->delete();
     return redirect('/user')->with('success', 'Data berhasil dihapus');
+    // return redirect()->route('user')->with('success','Data berhasil dihapus.');
+
     }
 }

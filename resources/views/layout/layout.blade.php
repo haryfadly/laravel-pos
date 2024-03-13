@@ -37,11 +37,11 @@
         ***********************************-->
 <div class="nav-header">
     <div class="brand-logo">
-        <a href="index.html">
-            <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
-        <span class="logo-compact"><img src="./images/logo-compact.png" alt=""></span>
+        <a href="{{ route('admin.dashboard') }}">
+            <b class="logo-abbr"><img src="/assets/images/logo.png" alt=""> </b>
+        <span class="logo-compact"><img src="/assets/images/logo-compact.png" alt=""></span>
         <span class="brand-title">
-        <img src="images/logo-text.png" alt=""></span>
+        <img src="/assets/images/logo-text.png" alt=""></span>
         </a>
         </div>
 </div>
@@ -65,16 +65,16 @@
             <li class="icons dropdown">
                 <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
                     <span class="activity active"></span>
-                    <img src="images/user/1.png" height="40" width="40" alt="">
+                    <img src="/assets/images/user/1.png" height="40" width="40" alt="">
     </div>
             <div class="drop-down dropdown-profile   dropdown-menu">
                 <div class="dropdown-content-body">
                 <ul>
                     <li>
-                    <a href="a"><i class="icon-user"></i> <span>Profile</span></a>
+                    <a href="{{ route('admin.dashboard') }}"><i class="icon-user"></i> <span>Profile</span></a>
                     </li>
                     <hr class="my-2">
-                    <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
+                    <li><a href="{{ route('logout') }}"><i class="icon-key"></i> <span>Logout</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -100,10 +100,10 @@
         </a>
     </li>
                     
-    <li class="nav-label">UI Components</li>
+    <li class="nav-label">Data</li>
     <li>
     <a href="/setdiskon" aria-expanded="false">
-    <i class="icon-speedometer menu-icon"></i><span class="nav-text">Setting Diskon</span>
+    <i class="icon-badge menu-icon"></i><span class="nav-text">Setting Diskon</span>
     </a>
     </li>
 
@@ -119,14 +119,14 @@
         </li>
 
         <li>
-        <a href="/laporan" aria-expanded="false">
-        <i class="icon-speedometer menu-icon"></i><span class="nav-text">Data Transaksi</span>
+        <a href="/transaksi" aria-expanded="false">
+        <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Data Transaksi</span>
         </a>
         </li>
 
             <li>
-            <a href="/transaksi" aria-expanded="false">
-        <i class="icon-speedometer menu-icon"></i><span class="nav-text">Data Laporan</span>
+            <a href="/laporan" aria-expanded="false">
+        <i class="icon-graph menu-icon"></i><span class="nav-text">Data Laporan</span>
             </a>
             </li>
         </ul>

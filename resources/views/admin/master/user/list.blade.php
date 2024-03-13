@@ -78,7 +78,7 @@
                 <h5 class="modal-title">Create Data User</h5>
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
-            <form method="POST" action="/user/store"> 
+            <form method="POST" action="/user/create"> 
             @csrf
                 <div class="modal-body">
                     <div class="form-group">
@@ -91,7 +91,7 @@
                     </div>
                     <div class="form-group">
                         <label>Password: </label>
-                        <input type="text" class="form-control" name="password" placeholder="password" required>
+                        <input type="password" class="form-control" name="password" placeholder="password" required>
                     </div>
                     <div class="form-group">
                         <label>Role: </label>
@@ -103,8 +103,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-undo"></i>Close</button>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i>Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-undo"></i> Close</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save changes</button>
                 </div>
             </form>
         </div>
@@ -126,7 +126,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Nama lengkap: </label>
-                        <input type="text" value="{{ $d->nama_lengkap }}" class="form-control" name="name" placeholder="nama" required>
+                        <input type="text" value="{{ $d->name }}" class="form-control" name="name" placeholder="nama" required>
                     </div>
                     <div class="form-group">
                         <label>Email: </label>
@@ -134,7 +134,7 @@
                     </div>
                     <div class="form-group">
                         <label>Password: </label>
-                        <input type="text" class="form-control" name="password" placeholder="password" required>
+                        <input type="password" class="form-control" name="password" placeholder="password" required>
                     </div>
                     <div class="form-group">
                         <label>Role: </label>
@@ -164,11 +164,11 @@
                 <h5 class="modal-title">Hapus Data User</h5>
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
-            <form method="GET" action="/user/destroy/{{ $c->id }}"> 
+            <form method="GET" action="/user/delete/{{ $c->id }}"> 
             @csrf
                 <div class="modal-body">
                     <div class="form-group">
-                        <h5>Apakah anda yakin untuk menghapus data ini?</h5>
+                        <h7>Apakah anda yakin untuk menghapus data ini?</h7>
                     </div>
                 </div>
                 <div class="modal-footer">
